@@ -1,14 +1,15 @@
-# Makefile
+CC = g++
+FLAGS = -Wall -pedantic -ansi -g -O0
 
-CC = gcc
+OBJS = main.cpp cliente.cpp conta_bancaria.cpp
 
-TARGET = program
+TARGET = programa
 
-CFLAGS  = -Wall -pedantic -ansi -g -O0
- 
- 
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
- 
+$(TARGET):
+	$(CC) $(FLAGS) $(OBJS) -o $(TARGET)
+
+%.o: %.cpp header.h
+	$(CC) $(FLAGS) -c $< -o $@
+
 clean:
-	$(RM) $(TARGET)
+	rm -f $(TARGET) *.o
