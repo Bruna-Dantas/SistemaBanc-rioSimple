@@ -42,4 +42,4 @@ Número da Conta: 1003, Saldo: R$ 150
 ```
 
 <br>
-Discentes: Bruna Dantas
+Discente: Bruna Dantas
